@@ -1,9 +1,9 @@
 ---
-title: "Lição 8 - Criar e integrar o PR do recurso"
-description: "Revise em conjunto a filtragem, as instruções, a atualização da skill, o perfil de QA e os testes; depois, crie um PR e use o Agent Merge."
+title: "Lição 8 - Criar e integrar o pull request do recurso"
+description: "Revise em conjunto a filtragem, as instruções, a atualização da skill, o perfil de garantia de qualidade e os testes; depois, crie um pull request e use o Agent Merge."
 authors:
   - geektrainer
-lastUpdated: 2026-09-17
+lastUpdated: 2026-10-22
 ---
 
 A implementação da filtragem, as atualizações de instruções e da skill, o perfil de garantia de qualidade (QA) e os testes estão salvos em uma única branch. É hora de revisá-los em conjunto e abrir um pull request. Você mesmo fez o merge do pull request (PR) de avaliações por estrelas; desta vez, permitirá que o **Agent Merge** gerencie o processo.
@@ -29,26 +29,34 @@ Até aqui, você selecionou **Merge pull request** por conta própria. O Agent M
 
 ## Usar o Agent Merge para gerenciar o PR
 
-Com todo o código criado e revisado, vamos permitir que o Agent Merge gerencie o processo do PR.
+Com todo o código criado e revisado, permita que o Agent Merge gerencie o processo do PR.
 
 1. Use o seletor de agentes para selecionar **Default agent**.
 2. Selecione o menu suspenso ao lado de **Create PR**.
-3. Selecione **Agent merge**. O botão mudará para **Agent merge**.
-4. Selecione **Agent merge** para iniciar o processo.
+3. Selecione **Agent Merge**. O botão mudará para **Agent Merge**.
+4. Selecione o botão **Agent Merge** para iniciar o processo. Selecionar apenas a opção no menu suspenso não inicia o processo.
 
-O processo do Agent Merge começa. Ele vai:
+O processo do Agent Merge será iniciado. Ele vai:
 
-- Criar o pull request com um título e uma descrição.
-- Se você iniciou a sessão por uma issue, incluir uma referência à issue relacionada no corpo da descrição.
-- Fazer rebase ou resolver possíveis conflitos de merge com a branch de destino.
-- Monitorar o processo de CI para garantir que todas as verificações sejam concluídas com sucesso.
-- Monitorar o PR para verificar feedback de outras pessoas desenvolvedoras ou da revisão de código do Copilot. Ele fará atualizações para resolver esses comentários.
-- Opcionalmente, fazer o merge automático do PR quando tudo for concluído com sucesso.
+- criar o pull request com título e descrição.
+- se a sessão tiver começado a partir de uma issue, incluir uma referência a ela no corpo da descrição.
+- fazer rebase ou resolver possíveis conflitos de merge com a branch de destino.
+- acompanhar o processo de CI e confirmar que todas as verificações passaram.
+- acompanhar o PR para verificar comentários de outras pessoas desenvolvedoras ou da revisão de código do Copilot e fazer alterações para resolvê-los.
+- opcionalmente, fazer o merge automático do PR quando tudo for aprovado.
 
-Vamos permitir que o Agent Merge também faça o merge do PR quando tudo for concluído com sucesso!
+Você também pode permitir que o Agent Merge faça o merge do PR depois que todas as verificações passarem.
 
-5. Selecione o menu suspenso ao lado de **Agent merge**.
-6. Confirme se há uma marca ao lado de **Merge pull request**.
+5. Revise o diff do PR e as evidências de verificação antes de conceder permissão para fazer o merge.
+6. Selecione o menu suspenso ao lado de **Agent Merge**.
+7. Confirme se há uma marca ao lado de **Merge pull request**.
+8. Peça explicitamente ao agente que faça o merge:
+
+    ```plaintext
+    Merge the PR once all required checks and approvals pass. Do not bypass repository protections.
+    ```
+
+9. Acompanhe o progresso e resolva os bloqueios informados. Antes de continuar, confirme que o status do PR é **Merged**. A permissão de merge habilitada ou um agente em execução não confirma que o merge foi concluído.
 
 
 > [!IMPORTANT]

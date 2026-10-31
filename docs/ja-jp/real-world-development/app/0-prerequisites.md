@@ -24,6 +24,7 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 
     ```shell
     node --version
+    npm --version
     ```
 
 3. プロジェクトの README と `package.json` に記載されている要件を満たしていれば、次のセクションに進めます。
@@ -39,9 +40,13 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 
     ```bash
     node --version
+    npm --version
     ```
 
-9. インストールしたバージョンが表示されることを確認します。
+9. インストールした Node.js と npm のバージョンが表示されることを確認します。
+
+> [!IMPORTANT]
+> Copilot app のエージェントも `node --version` と `npm --version` を実行できる必要があります。普段使っているターミナルで成功しても、アプリから利用できるとは限りません。Node.js のインストール後、または PATH の変更後は、アプリを完全に終了して再起動してください。セッションでどちらかのコマンドが引き続き失敗する場合は、続行する前に[セッション環境のトラブルシューティング手順][session-environment]を実施してください。
 
 > [!IMPORTANT]
 > 各ワークツリーには、プロジェクトの依存関係と E2E チェック用の Playwright Chromium も必要です。ワークツリーの準備では学習用リポジトリの README に従い、インストールの要求は内容を確認してから承認してください。
@@ -86,3 +91,4 @@ Tailspin Toys プロジェクトの自分用コピーを使って作業します
 [node-download]: https://nodejs.org/en/download
 [template-repository]: https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-template-repository
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
+[session-environment]: ../3-agent-modes/#issue-からセッションを開始する

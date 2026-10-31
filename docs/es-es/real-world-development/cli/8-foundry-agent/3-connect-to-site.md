@@ -67,7 +67,7 @@ El proxy ofrece al navegador una forma segura de conectarse al concierge. Ahora 
     ```
 
 2. Mantén la función local en ejecución e inicia el sitio Astro en otro terminal con el comando que te proporcione Copilot.
-3. Vuelve a Copilot CLI. El servidor MCP de Playwright que añadiste en el [ejercicio 4][playwright-lesson] ya está disponible. Pide a Copilot que pruebe el widget:
+3. Vuelve a Copilot CLI. El servidor MCP de Playwright que revisaste o añadiste en la [lección 6][playwright-lesson] ya está disponible. Pide a Copilot que pruebe el widget:
 
     ```text
     Use the Playwright MCP server to test the Backer Concierge widget end to end in the running Tailspin Toys site. Verify its core chat flow, conversation continuity, accessibility, error handling, grounding boundaries, and secure use of the local proxy. Report the results and include evidence for any failures.
@@ -91,6 +91,6 @@ Continúa con [Repaso y próximos pasos][review] para terminar el taller de CLI.
 
 [overview]: ../
 [previous-lesson]: ../2-build-and-deploy/
-[review]: ../../9-review/
-[playwright-lesson]: ../../4-mcp/
+[review]: ../../10-review/
+[playwright-lesson]: ../../6-mcp-playwright/
 [cleanup]: ../#elimina-los-recursos
